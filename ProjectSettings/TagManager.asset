@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
+  - enemy
+  - belt
   layers:
   - Default
   - TransparentFX

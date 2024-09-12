@@ -9,32 +9,52 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 89078162858383689, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1862488752, guid: efeabb65ef699614cab95525726a774e, type: 3}
+    - target: {fileID: 89078162858383689, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 89078162858383689, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 89078162858383689, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3064085171927461260, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
       propertyPath: m_Name
       value: SM PopUpPlatform idel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5282498136923299312, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
+      propertyPath: m_Radius
+      value: 0.08083001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282498136923299312, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00022479892
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813829906130707371, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149125491824258960, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1862488752, guid: efeabb65ef699614cab95525726a774e, type: 3}
     - target: {fileID: 6149125491824258960, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6149125491824258960, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6149125491824258960, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8427477655164995792, guid: 5b928cc7614bc4147981743638f535b9, type: 3}
       propertyPath: m_LocalPosition.x

@@ -47,11 +47,7 @@ public class ObjMovementFSM : MonoBehaviour
         _pointsHolder.parent = null;
         ChangeState(ObjMovementSate.Moving);
         
-        if (_points.Length == 0)
-        {
-            Debug.LogError("No points assigned to the moving platform.");
-            return;
-        }
+       
 
         // Start at the first point
         // transform.position = _points[0].position;
@@ -63,6 +59,10 @@ public class ObjMovementFSM : MonoBehaviour
     void Update()
     {
         if (!_movementAllowed) { return; }
+        if (_points.Length == 0)
+        {
+            return;
+        }
         TransitionState();
         WaitTimer();
     }

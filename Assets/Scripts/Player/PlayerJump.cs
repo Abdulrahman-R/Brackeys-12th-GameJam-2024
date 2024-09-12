@@ -105,7 +105,7 @@ public class PlayerJump : MonoBehaviour
         _coyoteTimer = 0;
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         Collider2D[] colliders = Physics2D.OverlapBoxAll(_groundCheck.position, _groundCheckSize, 0, _groundLayer);
         return colliders.Length > 0;

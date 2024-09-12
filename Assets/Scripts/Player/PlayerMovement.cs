@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float effectorSpeed { get; set; }
+
     public Rigidbody2D _rb { get; private set; }
     #region movment configs
     [Header("Movment Configs")]
@@ -56,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     private void Move(Vector2 moveInput)
     {
         // Apply movement only to the X-axis
-        _rb.velocity = new Vector2(moveInput.x, _rb.velocity.y);
+        _rb.velocity = new Vector2(moveInput.x + effectorSpeed, _rb.velocity.y);
     }
 
 
