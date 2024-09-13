@@ -15,6 +15,8 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] Transform _groundCheck;
     [SerializeField] Vector2 _groundCheckSize = new Vector2(0.5f, 0.1f);
     [SerializeField] private float _extraGravity = 700f;
+    [SerializeField] private float _maxExtraGravity;
+    private float _currExtraGravity;
     [SerializeField] private float _gravityDelay = 0.2f;
     [SerializeField] LayerMask _groundLayer;
     private float _timeInAir;
@@ -28,6 +30,8 @@ public class PlayerJump : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _currJumpForce = 0;
+
+        _currExtraGravity = _extraGravity;
 
         GameController.Instance.decisionTimeCounter.onTimeMultiplier += UpdateJumpForce;
 
@@ -95,7 +99,7 @@ public class PlayerJump : MonoBehaviour
     {
         if (_timeInAir > _gravityDelay)
         {
-            _rb.AddForce(new Vector2(0f, -_extraGravity * Time.deltaTime));
+            _rb.AddForce(new Vector2(0f, -_currExtraGravity * Time.deltaTime));
         }
     }
 
@@ -122,5 +126,8 @@ public class PlayerJump : MonoBehaviour
         _currJumpForce = _jumpForce * GameController.Instance.decisionTimeCounter._timeMultiplier;
 
         _currJumpForce = Mathf.Clamp(_currJumpForce, _jumpForce, _maxJumpForce);
+
+        _currExtraGravity = _extraGravity * GameController.Instance.decisionTimeCounter._timeMultiplier;
+        _currExtraGravity = Mathf.Clamp(_currExtraGravity, _extraGravity, _maxExtraGravity);
     }
 }

@@ -7,6 +7,7 @@ public class PlayerController : Singleton<PlayerController>
 
     public PlayerMovement playerMovement;
     public PlayerJump playerJump;
+    public PlayerDeath playerDeath;
 
     public bool _canAct { get; private set; }
 

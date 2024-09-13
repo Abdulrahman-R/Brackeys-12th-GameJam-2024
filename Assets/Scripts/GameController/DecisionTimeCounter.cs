@@ -13,6 +13,8 @@ public class DecisionTimeCounter : MonoBehaviour
 
     public Action onTimeMultiplier;
     public Action onTimeChange;
+    [SerializeField] private float _incrementForEach10s;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +65,8 @@ public class DecisionTimeCounter : MonoBehaviour
     }
     private void CalculateTimeMultiplier() 
     {
-        _timeMultiplier = 1 + (_currentTime / 10f);
+        _timeMultiplier = 1 + ((_currentTime / 10f) * _incrementForEach10s);
+        Debug.Log(_timeMultiplier);
         onTimeMultiplier?.Invoke();
     }
 

@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.09, y: -0.96, z: -3.37131}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2000007265505235918}
@@ -207,7 +207,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'SM moving Object Contorller '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7077389708768270416, guid: 741bde4248d56534b8340a71777c1037, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -230,6 +231,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2325765649394165136}
     m_Modifications:
+    - target: {fileID: 122944158348371610, guid: b5fe5a43a66c9e341bbb8394c9f8ec36, type: 3}
+      propertyPath: m_Size.y
+      value: 0.029203355
+      objectReference: {fileID: 0}
+    - target: {fileID: 122944158348371610, guid: b5fe5a43a66c9e341bbb8394c9f8ec36, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.050870314
+      objectReference: {fileID: 0}
     - target: {fileID: 4767027645186553216, guid: b5fe5a43a66c9e341bbb8394c9f8ec36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -274,7 +283,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CM moving Object Contorller
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7483616237005597384, guid: b5fe5a43a66c9e341bbb8394c9f8ec36, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

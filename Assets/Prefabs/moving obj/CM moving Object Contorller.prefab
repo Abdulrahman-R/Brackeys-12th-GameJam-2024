@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4767027645186553216}
   - component: {fileID: 122944158348371610}
   - component: {fileID: 641746401521715614}
+  - component: {fileID: 7483616237005597384}
   m_Layer: 6
   m_Name: CM moving Object Contorller
   m_TagString: Platform
@@ -98,6 +99,19 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &7483616237005597384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666895213842759484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b7605d42035eb45a203083b3d2f2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceDirection: {x: 1, y: 0, z: 0}
 --- !u!1 &8708185660767762838
 GameObject:
   m_ObjectHideFlags: 0

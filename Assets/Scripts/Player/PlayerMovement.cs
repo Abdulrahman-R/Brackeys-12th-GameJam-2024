@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,19 +5,19 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float effectorSpeed { get; set; }
-
     public Rigidbody2D _rb { get; private set; }
+
     #region movment configs
     [Header("Movment Configs")]
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private float _maxSpeed;
-    [SerializeField]private float _currSpeed;
+    [SerializeField] private float _currSpeed;
     [SerializeField] private float _smoothTime;
     private Vector2 currentInput;
     private Vector2 smoothInputVelocity;
     private Vector2 moveInput;
     #endregion
-    // Start is called before the first frame update
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -26,8 +25,6 @@ public class PlayerMovement : MonoBehaviour
         GameController.Instance.decisionTimeCounter.onTimeMultiplier += UpdateMoveSpeed;
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         moveInput = ListenForMovementInputs();
@@ -50,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
             currentInput = Vector2.SmoothDamp(currentInput, input, ref smoothInputVelocity, _smoothTime);
             // Only calculate the horizontal movement, leave vertical movement alone
             Vector2 moveInput = new Vector2(currentInput.x * _currSpeed, _rb.velocity.y);
-
             return moveInput;
         }
     }
@@ -61,12 +57,9 @@ public class PlayerMovement : MonoBehaviour
         _rb.velocity = new Vector2(moveInput.x + effectorSpeed, _rb.velocity.y);
     }
 
-
-
     private void UpdateMoveSpeed()
     {
         _currSpeed = _moveSpeed * GameController.Instance.decisionTimeCounter._timeMultiplier;
-
         _currSpeed = Mathf.Clamp(_currSpeed, _moveSpeed, _maxSpeed);
     }
 }

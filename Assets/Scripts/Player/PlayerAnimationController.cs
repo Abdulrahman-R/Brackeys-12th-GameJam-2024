@@ -42,6 +42,7 @@ public class PlayerAnimationController : MonoBehaviour
     {
         if (_currRenderer != null)
         {
+            /*
             if (_rb.velocity.x > 0)
             {
                 _currRenderer.flipX = false;
@@ -49,7 +50,15 @@ public class PlayerAnimationController : MonoBehaviour
             {
                 _currRenderer.flipX = true;
             }
-                
+              
+            */
+
+            if((Input.GetAxis("Horizontal") > 0)){
+
+                _currRenderer.flipX = false;
+            }else if((Input.GetAxis("Horizontal") < 0)){
+                _currRenderer.flipX = true;
+            }
         }
     }
 
@@ -121,7 +130,7 @@ public class PlayerAnimationController : MonoBehaviour
             _currAnimator.SetBool("isStopping", false);  // Disable stopping
             ChangeState(PlayerState.Moving);
         }
-        else if (Mathf.Abs(_rb.velocity.magnitude - Mathf.Abs(PlayerController.Instance.playerMovement.effectorSpeed)) <= 0.1f)
+        else if (Mathf.Abs((_rb.velocity.magnitude) - Mathf.Abs(PlayerController.Instance.playerMovement.effectorSpeed)) <= 0.1f)
         {
             _currAnimator.SetBool("isIdle", true);   // Enable idle
             _currAnimator.SetBool("isStopping", false);  // Disable stopping
