@@ -8,6 +8,7 @@ public class GameController : Singleton<GameController>
      public ModeSwitcher modeSwitcher;
      public CameraShaker cameraShaker;
      public LevelLoader levelLoader;
-    public GameloopController gameloopController;
+     public GameloopController gameloopController;
+    public AudioManager audioManager;
 
 }

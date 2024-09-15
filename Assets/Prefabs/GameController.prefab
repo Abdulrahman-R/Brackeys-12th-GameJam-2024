@@ -1,5 +1,75 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4650028962190688153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4600972944090199348}
+  - component: {fileID: 27338454635895823}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4600972944090199348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4650028962190688153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 41308223032356330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &27338454635895823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4650028962190688153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a84023108a7e94dadb02a8515190fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: jump
+    clip: {fileID: 8300000, guid: f510970a10d65104e86d3e8133321a7f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: exp
+    clip: {fileID: 8300000, guid: 2d7a6e0c7c2ec234191c82c914bfcf38, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: thunder
+    clip: {fileID: 8300000, guid: 9ab4508dc2969dd4c826f1a38a546403, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: win
+    clip: {fileID: 8300000, guid: bfade1de1b24f2a459892f67f4b9d795, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: buble
+    clip: {fileID: 8300000, guid: aff3e9d97b94d8f4a94f6618c224b65c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
 --- !u!1 &4825229512791005293
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +182,7 @@ GameObject:
   - component: {fileID: 8001375811890827530}
   - component: {fileID: 4332163349941627444}
   - component: {fileID: 4610067270060695660}
+  - component: {fileID: 8341028016428564627}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -133,6 +204,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6001517300319529514}
+  - {fileID: 4600972944090199348}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5598179525443156067
@@ -150,6 +222,9 @@ MonoBehaviour:
   decisionTimeCounter: {fileID: 8001375811890827530}
   modeSwitcher: {fileID: 2661558671701877448}
   cameraShaker: {fileID: 2763852085522725711}
+  levelLoader: {fileID: 0}
+  gameloopController: {fileID: 8341028016428564627}
+  audioManager: {fileID: 27338454635895823}
 --- !u!114 &2661558671701877448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53dd29482ae34ad478ec0904c9533dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _incrementForEach10s: 0.5
 --- !u!114 &4332163349941627444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +279,17 @@ MonoBehaviour:
   _decisionTimeCounter: {fileID: 8001375811890827530}
   _timerText: {fileID: 0}
   _avgHB: 80
+--- !u!114 &8341028016428564627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098231148749366184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327a10b4e1a2db34dabc40bedeb436a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loseDelay: 0.5
+  _winDelay: 0.5

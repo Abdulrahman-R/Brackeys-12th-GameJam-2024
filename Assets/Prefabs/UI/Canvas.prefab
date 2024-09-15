@@ -48,7 +48,7 @@ Canvas:
   m_GameObject: {fileID: 603815081688708856}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -118,10 +118,34 @@ PrefabInstance:
       propertyPath: m_text
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2099117340203961320, guid: 1cb8fd2daafb6184aa822cae00d57159, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8be68767eecf8a7489a7517b60ba03e8, type: 2}
+    - target: {fileID: 2099117340203961320, guid: 1cb8fd2daafb6184aa822cae00d57159, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099117340203961320, guid: 1cb8fd2daafb6184aa822cae00d57159, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2585493090949165575, guid: 1cb8fd2daafb6184aa822cae00d57159, type: 3}
       propertyPath: m_text
       value: 0.0
       objectReference: {fileID: 0}
+    - target: {fileID: 2585493090949165575, guid: 1cb8fd2daafb6184aa822cae00d57159, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8be68767eecf8a7489a7517b60ba03e8, type: 2}
+    - target: {fileID: 2585493090949165575, guid: 1cb8fd2daafb6184aa822cae00d57159, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585493090949165575, guid: 1cb8fd2daafb6184aa822cae00d57159, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5795505931864672146, guid: 8be68767eecf8a7489a7517b60ba03e8, type: 2}
     - target: {fileID: 3673094412877828954, guid: 1cb8fd2daafb6184aa822cae00d57159, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -110,6 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00899692ec3fb9449fa98a0a5876fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyEffect: {fileID: 1215839475325153595, guid: f28bd45d3f1c14349842737d973f3378, type: 3}
+  _zOffset: 0
+  _changeModeDelay: 0.5
+  GFX: {fileID: 8520901168365636124}
 --- !u!95 &4225025692218070837
 Animator:
   serializedVersion: 5

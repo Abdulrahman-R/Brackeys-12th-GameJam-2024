@@ -2,8 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum PatternMode
+{
+    AllTogather,
+    onlyOne,
+}
+
 public class PopUpPattern : MonoBehaviour
 {
+    [SerializeField] public PatternMode _patternMode;
     private PopUpPlatformBrain _popUpPlatformBrain;
     [SerializeField] GameObject[] _objsToPop;
     [SerializeField] float _offsetTime;
@@ -28,11 +36,11 @@ public class PopUpPattern : MonoBehaviour
         OffsetTimer();
         if (_currOffsetTime > 0) { return; }
 
-        Poping();
+        Poping(); 
         WaitTimer();
     }
 
-    private void PopUp()
+    private void PopUpAllTogather()
     {
         for( int i = 0; i < _popPerTime; i++)
         {
@@ -46,6 +54,20 @@ public class PopUpPattern : MonoBehaviour
             _popingUp = !(_popingUp);
         }
 
+    }
+
+    private void PopUpOnlyOne()
+    {
+
+        _objsToPop[_popCounter].SetActive(true);
+        PopOutExceptOne(_popCounter);
+        _popCounter++;
+        if (_popCounter >= _objsToPop.Length)
+        {
+            _popCounter = 0;
+        }
+
+        Debug.Log("POOOPING");
     }
 
     private void PopOut()
@@ -66,22 +88,35 @@ public class PopUpPattern : MonoBehaviour
 
     private void Poping()
     {
-        if (_popingUp)
+        
+        if (_patternMode == PatternMode.AllTogather)
         {
-            if (_currPopingDlayTime <= 0)
+            if (_popingUp)
             {
-                PopUp();
-                StartWaitTimer();
+                if (_currPopingDlayTime <= 0)
+                {
+                    PopUpAllTogather();
+                    StartWaitTimer();
+                }
+            }
+            else
+            {
+                if (_currPopingDlayTime <= 0)
+                {
+                    PopOut();
+                    StartWaitTimer();
+                }
             }
         }
         else
         {
             if (_currPopingDlayTime <= 0)
             {
-                PopOut();
+                PopUpOnlyOne();
                 StartWaitTimer();
             }
         }
+        
        
     }
 
@@ -104,5 +139,15 @@ public class PopUpPattern : MonoBehaviour
     }
 
 
- 
+
+    private void PopOutExceptOne(int index)
+    {
+        for(int i =0; i < _objsToPop.Length; i++)
+        {
+            if(i != index)
+            {
+                _objsToPop[i].SetActive(false);
+            }
+        }
+    }
 }

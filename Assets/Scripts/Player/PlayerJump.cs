@@ -61,7 +61,7 @@ public class PlayerJump : MonoBehaviour
         if (!PlayerController.Instance._canAct) { return; }
         if (Input.GetButtonDown("Jump") && (_coyoteTimer > 0))
         {
-            
+            GameController.Instance.audioManager.PlaySound("jump");
             _jumpRequest = true;
         }
     }
@@ -97,6 +97,7 @@ public class PlayerJump : MonoBehaviour
 
     private void ExtraGravity()
     {
+        if (!PlayerController.Instance._canAct) { return; }
         if (_timeInAir > _gravityDelay)
         {
             _rb.AddForce(new Vector2(0f, -_currExtraGravity * Time.deltaTime));

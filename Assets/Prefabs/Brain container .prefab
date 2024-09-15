@@ -242,6 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f7c64fbdfb3bc4fa6cefeacc604361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _destroyEffect: {fileID: 7183534830816692356, guid: a3ee8d71a62aaf94d8b7a0048b890f9c, type: 3}
+  _zOffset: 0
 --- !u!95 &8163220226775374501
 Animator:
   serializedVersion: 5

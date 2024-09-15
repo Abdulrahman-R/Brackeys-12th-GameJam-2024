@@ -21,7 +21,30 @@ public class LevelLoader : MonoBehaviour
 
     void Update()
     {
-        if(inMenu == true)
+        if (!inLastScreen && !inMenu)
+        {
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                LoadNextLevel();
+
+
+            }
+
+        }
+
+        if (!inMenu)
+        {
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                LoadLevelByIndex(SceneManager.GetActiveScene().buildIndex - 1);
+
+
+            }
+        }
+
+        if(inMenu)
         {
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -31,8 +54,7 @@ public class LevelLoader : MonoBehaviour
 
             }
 
-
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 QuitGame();
 
@@ -41,13 +63,7 @@ public class LevelLoader : MonoBehaviour
         else if(inLastScreen == true)
         {
 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                LoadNextLevel();
-
-
-            }
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 LoadLevelByIndex(0);
 
@@ -63,7 +79,7 @@ public class LevelLoader : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 LoadLevelByIndex(0);
 
@@ -91,6 +107,15 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
+        if(!inMenu && !inLastScreen)
+        {
+            if (PlayerController.Instance.movingPlatformDetector != null)
+            {
+                PlayerController.Instance.movingPlatformDetector._canParent = false;
+            }
+        }
+       
+       
         animator.SetTrigger("start");
         Time.timeScale = 1;
         yield return new WaitForSeconds(transitionTime);
