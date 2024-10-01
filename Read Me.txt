@@ -1,0 +1,30 @@
+Project Name: "Ruled By Two"
+
+Project Type: Video Game
+
+Target Platform: PC
+
+Game Genre: 2D Platformer with Pixel Art Style
+
+Game Concept: The game derives its name from the duality at the core of its gameplay, where control alternates between two different modes in each stage - the Mind Mode and the Heart Mode - symbolizing the balance between thoughts and emotions.
+
+Mind Mode (Calm Before the Storm): In this phase, you are completely safe and will not take any damage. However, the time it takes you to complete this stage directly impacts the intensity of the next mode. This period is about careful planning and decision-making, serving as preparation for what's to come.
+
+Heart Mode (Storm Mode): Your performance in Mind Mode determines the player's and environment's speed in this mode. Here, everything becomes dangerous, turning survival into a challenge. The storm intensifies based on how efficiently you handled the calm period. Your strategy and effectiveness during Mind Mode directly affect the chaos and danger in Storm Mode.
+
+Development Methodology: Agile methodology
+
+Development Duration: 7 days
+
+Game Engine: Unity, version 2022.3.39f1
+
+Programming Language: C#
+
+Graphics Software: Aseprite, version 1.3.8.1
+
+Note: This game is made for Brackeys Game Jam 2024.2 with the theme "Calm Before the Storm."
+
+Usage Terms: This project is not allowed to be used for any commercial purposes. For personal use, you must mention me using one of the following contact methods:
+Email: abdulrahman.r.gus@gmail.com
+Discord: A.Alrehaili#2196
+itch.io: ARehaili_Dev
